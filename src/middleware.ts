@@ -6,7 +6,7 @@ export async function middleware(req: NextRequest) {
   if (!token) return NextResponse.redirect(new URL("/", req.url));
 
   let loginUser = null;
-console.log(`${process.env.NEXT_PUBLIC_BACKEND_API}/api/auth/google/login_user`)
+
   try {
     loginUser = (
       await axios.get(
